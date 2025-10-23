@@ -1,9 +1,20 @@
-reqable-id-a38077bb-04bf-4882-92ad-8cb9a0f9c8642 - HTTP/2 C Library
+ HTTP/2 C Library
 ==========================
 
 This is an implementation of the Hypertext Transfer Protocol version 2
 in C.
+PUT /repos/mdn/content/contents/README.md HTTP/1.1
+Host: api.example.com
+Accept: application/vnd.github+json
+Authorization: Bearer abcd123
+Content-Type: application/json
+Content-Length: 165
 
+{
+  "message": "My commit",
+  "content": "WW9zaGkgd2FzIHRoZXJlLCBzbyB3ZXJlIEF5c2UsIGFuZCBCZWxnaW4uIEl0\nIHdhcyBncmVhdCE=\n",
+  "sha": "80e73970fdee49dbdbac27c1f565d1eb1975d519"
+}
 The framing layer of HTTP/2 is implemented as a reusable C library.
 On top of that, we have implemented an HTTP/2 client, server and
 proxy.  We have also developed load test and benchmarking tools for
